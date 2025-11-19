@@ -1,75 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachini Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sachini — Portfolio</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- fontawesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Inline SVG logo -->
+      <a class="brand" href="#home" aria-label="Sachini homepage">
+        <!-- Replace content of logo.svg if you want a different logo -->
+        <svg id="logo" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="50" cy="50" r="48" fill="none" stroke="#007bff" stroke-width="6"/>
+          <text x="50%" y="55%" text-anchor="middle" font-size="40" fill="#007bff" font-family="Inter, sans-serif" font-weight="700">S</text>
+        </svg>
+        <span class="brand-name">Sachini</span>
+      </a>
 
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <h2 class="logo">Sachini</h2>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="home-content">
-            <h1>Hello, I'm <span>Sachini</span></h1>
-            <p>A passionate beginner web developer.</p>
-            <a href="#projects" class="btn">View My Work</a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a class="btn primary" href="#projects">View Work</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="title">Hi — I'm <span class="accent">Sachini</span></h1>
+          <p class="lead">Beginner web developer building simple, clean, and responsive websites. I love learning and shipping small projects that teach new skills.</p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="socials">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
         </div>
+
+        <div class="hero-right">
+          <!-- Profile image placeholder -->
+          <div class="photo-card">
+            <img id="profile-photo" src="images/profile.png" alt="Profile photo (replace in images/profile.png)">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I'm Sachini, an enthusiastic beginner learning web development.
-            I enjoy building clean and simple websites and learning new technologies.
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">
+          I'm a motivated beginner in web development. I focus on HTML, CSS, and JavaScript and enjoy building projects to practice real skills — responsive design, interactivity and GitHub workflows.
         </p>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>This portfolio website showcases my skills and learning journey.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Simple Calculator</h3>
-                <p>A basic calculator built using HTML, CSS, and JavaScript.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>To-Do List App</h3>
-                <p>A simple task management app built using JavaScript.</p>
-            </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid" aria-hidden="false">
+          <div class="skill-pill">HTML</div>
+          <div class="skill-pill">CSS</div>
+          <div class="skill-pill">JavaScript</div>
+          <div class="skill-pill">Git & GitHub</div>
+          <div class="skill-pill">Responsive Design</div>
+          <div class="skill-pill">Basic UI</div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <strong>sachini@example.com</strong></p>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-desc">Click any project to open its GitHub repo (replace with your own links).</p>
+
+        <div class="projects-grid">
+          <!-- Project card 1 -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project1.png" alt="Portfolio screenshot (replace images/project1.png)">
+            </div>
+            <div class="project-body">
+              <h3>Portfolio Website</h3>
+              <p>A modern, responsive portfolio built with HTML, CSS and JavaScript. This site includes dark mode and smooth scrolling.</p>
+              <div class="project-actions">
+                <a class="btn small" href="#">View Live</a>
+                <a class="btn outline" href="#">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 2 -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project2.png" alt="Calculator screenshot (replace images/project2.png)">
+            </div>
+            <div class="project-body">
+              <h3>Calculator</h3>
+              <p>A simple calculator app to practice JavaScript logic and DOM manipulation.</p>
+              <div class="project-actions">
+                <a class="btn small" href="#">Try Demo</a>
+                <a class="btn outline" href="#">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 3 -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="images/project3.png" alt="To-do list screenshot (replace images/project3.png)">
+            </div>
+            <div class="project-body">
+              <h3>To-Do List</h3>
+              <p>A small task app using localStorage — add, remove and persist items between reloads.</p>
+              <div class="project-actions">
+                <a class="btn small" href="#">Open</a>
+                <a class="btn outline" href="#">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Sachini. All rights reserved.</p>
-    </footer>
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-desc">I’d love to hear from you — questions, feedback, or collaboration ideas.</p>
 
+          <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="mailto:sachini@example.com">sachini@example.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+          </ul>
+        </div>
+
+        <!-- Working contact form via Formspree (replace FORM_ID with your Formspree ID) -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="_replyto" required placeholder="your@email.com">
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required placeholder="Your message..."></textarea>
+          </label>
+
+          <!-- Optional: honeypot field to reduce spam -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <div class="form-row">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button id="clear-form" type="button" class="btn ghost">Clear</button>
+          </div>
+
+          <p class="form-note">Form powered by Formspree — replace <code>YOUR_FORM_ID</code> with your ID.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sachini. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
